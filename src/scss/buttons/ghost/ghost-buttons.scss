@@ -1,0 +1,34 @@
+@import "_variables";
+@import "_mixins";
+
+.btn {
+  display: inline-block;
+  margin: $btn-margin;
+  padding: $btn-paddings;
+  background: transparent;
+  border-radius: $btn-border-radius;
+  font-weight: $btn-font-weight;
+  text-align: center;
+
+  &.green span {
+    @include font-gradient($yellow, $teal, left);
+  }
+  &.orange span {
+    @include font-gradient($lorange, $dorange, left);
+  }
+  &.blue span {
+    @include font-gradient($blue, $purple, left);
+  }
+}
+/* Gradient & Border Technique */
+.border {
+  .green {
+    @include border-gradient($yellow, $teal, 2px);
+  }
+  .orange {
+    @include border-gradient($lorange, $dorange, 2px);
+  }
+  .blue {
+    @include border-gradient($blue, $purple, 2px);
+  }
+}

@@ -1,0 +1,17 @@
+include mixins/header.pug
+include mixins/stylesheets.pug
+include mixins/scripts.pug
+
+<!DOCTYPE html>
+html(lang="en")
+  +header()
+  +stylesheets()
+  body
+
+    div.btn-container 
+      div.buttons.border
+        a.btn.green(href=""): span Nice
+        a.btn.orange(href=""): span Wow
+        a.btn.blue.big(href=""): span How colorful
+
+  +scripts()
